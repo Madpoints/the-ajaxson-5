@@ -1,0 +1,26 @@
+body {
+    font-family: "Courier New", monospace;
+    text-align: center;
+    margin: auto;
+}
+
+#header {
+    background-color: #AA5588;
+    border-radius: 3px;
+    height: 100px;
+    margin: auto;
+    line-height: 100px;
+    color: #DCDCDC;
+}
+
+.gif-query {
+    border: 1px solid black;
+}
+
+.invalid-field {
+    border: 1px solid red;
+}
+
+.error-message {
+    color: red;
+}

@@ -18,12 +18,21 @@ function fetchAndDisplayGif(event) {
     // Because we will be making our own AJAX request, we dont need to send a normal request and we definitely don't want the page to refresh.
     event.preventDefault();
 
+    // clear any previous error message that might be displayed from last time
+    clearError();
+
     // get the user's input text from the DOM
-    var searchQuery = $("input[name=tag]").val();; // TODO should be e.g. "dance"
+    var answer = $("input[name=riddle]").val();
+    var searchQuery = $("input[name=tag]").val();
+
+    if (answer != "5") {
+        displayError();
+        return;
+    }
 
     // configure a few parameters to attach to our request
     var params = {
-        api_key: "dc6zaTOxFJmzC",
+        api_key: "",
         tag : "jackson 5 " + searchQuery // TODO should be e.g. "jackson 5 dance"
     };
 
@@ -55,7 +64,8 @@ function fetchAndDisplayGif(event) {
 
     // TODO
     // give the user a "Loading..." message while they wait
-    $('#feedback').html("Loading...");
+    $("#feedback").text("Loading...");
+    setGifLoadedStatus(false)
 
 }
 
@@ -68,4 +78,15 @@ function fetchAndDisplayGif(event) {
 function setGifLoadedStatus(isCurrentlyLoaded) {
     $("#gif").attr("hidden", !isCurrentlyLoaded);
     $("#feedback").attr("hidden", isCurrentlyLoaded);
+}
+
+function displayError() {
+    $('.error-message').text("No gifs for you.");
+    $('input[name=riddle]').addClass('invalid-field');
+    $("#gif").attr("hidden", true);
+}
+
+function clearError() {
+    $(".error-message").text("");
+    $('input[name=riddle]').removeClass('invalid-field');
 }
