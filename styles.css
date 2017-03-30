@@ -1,20 +1,58 @@
 body {
-    font-family: "Courier New", monospace;
-    text-align: center;
-    margin: auto;
+    font-family: sans-serif, monospace;
+    color: #333333;
+    margin: 0 auto;
+    height: auto;
 }
 
-#header {
-    background-color: #AA5588;
+input[name=tag] {
+    border: 1px solid #E3E3E3;
     border-radius: 3px;
-    height: 100px;
-    margin: auto;
-    line-height: 100px;
-    color: #DCDCDC;
+    height: 2em;
+}
+
+input[name=riddle] {
+    border: 1px solid #E3E3E3;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    height: 2em;
+}
+
+strong {
+    border: 1px solid #E3E3E3;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding: .36em;
+}
+
+#title {
+    background-color: #EEEEEE;
+    height: auto;
+    padding: 10px;
+    line-height: 0;
+    color: black;
+    text-align: center;
+}
+
+#button {
+    color: white;
+    padding: 10px;
+    font-size: 1em;
+}
+
+#gif-image {
+    text-align: center;
+    padding-bottom: 20px;
 }
 
 .gif-query {
-    border: 1px solid black;
+    background-color: #F5F5F5;
+    border: 1px solid #E3E3E3;
+    border-radius: 3px;
+    padding: 20px;
+    margin: auto;
+    text-align: left;
+    font-size: 1em;
 }
 
 .invalid-field {
@@ -22,5 +60,5 @@ body {
 }
 
 .error-message {
-    color: red;
+    color: #9C4D49;
 }

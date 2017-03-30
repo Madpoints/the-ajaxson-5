@@ -82,11 +82,13 @@ function setGifLoadedStatus(isCurrentlyLoaded) {
 
 function displayError() {
     $('.error-message').text("No gifs for you.");
-    $('input[name=riddle]').addClass('invalid-field');
+    $('input[name=riddle]').attr('style', "border: 1px solid #9C4D49");
+    $('strong').attr('style', "border: 1px solid #9C4D49; color: #9C4D49; background-color: #EFDFDF");
     $("#gif").attr("hidden", true);
 }
 
 function clearError() {
     $(".error-message").text("");
-    $('input[name=riddle]').removeClass('invalid-field');
+    $('input[name=riddle]').attr('style', "");
+    $('strong').attr('style', "");
 }
