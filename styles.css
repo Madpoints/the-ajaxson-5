@@ -38,6 +38,7 @@ strong {
     color: white;
     padding: 10px;
     font-size: 1em;
+    margin-left: 1em;
 }
 
 #gif-image {
@@ -53,6 +54,7 @@ strong {
     margin: auto;
     text-align: left;
     font-size: 1em;
+    margin: 0 1em 1.5em 1em;
 }
 
 .invalid-field {
